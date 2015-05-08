@@ -30,3 +30,6 @@ convert -delay 20 $(ls *png | head -n40) animation.gif
 
 # Get the content of a remote directory (you will get only d3/ if you put n=3)
 wget -r -nH --cut-dir=[n] --level=1 http://www.site.com/d1/d2/d3
+
+# Reconfigure DHCP (seems useful when you encounter a DNS problem bound to your configuration)
+sudo dhclient -v [net-interface]
